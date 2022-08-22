@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Pengui\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Pengui\\.nuget\\packages"
+    ]
+  }
+}
