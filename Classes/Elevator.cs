@@ -15,6 +15,10 @@ namespace Area_51.Classes
         {
             Console.WriteLine("Elevator going to floor " + staff.ObjectiveFloor);
         }
+        public Elevator()
+        {
+
+        }
 
     }
 }

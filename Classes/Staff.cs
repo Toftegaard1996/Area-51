@@ -39,11 +39,10 @@ namespace Area_51.Classes
                 ObjectiveFloor = rnd.Next(0, Buildings.Count);
             }
             Console.WriteLine(ObjectiveFloor);
-            ControlPanel controlpanel = new ControlPanel();
-            SwipeCard(controlpanel);
+            SwipeCard();
         }
 
-        public void SwipeCard(ControlPanel controlPanel) 
+        public void SwipeCard() 
         {
             //Use Scanner
             Console.WriteLine("Medarbejder swiper sit kort");
@@ -54,8 +53,6 @@ namespace Area_51.Classes
             SecurityLevels securityLevels = new SecurityLevels();
             int ThisSecurityLevel = securityLevels.SecurityLevel;
             SecurityLevels.LevelOfClearence(ThisSecurityLevel);
-            Scanner scanner = new Scanner();
-            controlPanel.RequestElevator(scanner, securityLevels, Staff);
             //If not dead, use elevator
         }
     }

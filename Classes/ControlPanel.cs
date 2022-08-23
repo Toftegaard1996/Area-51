@@ -20,5 +20,9 @@ namespace Area_51.Classes
                 turret.KillRequest(staff); 
             }
         }
+        public ControlPanel()
+        {
+
+        }
     }
 }

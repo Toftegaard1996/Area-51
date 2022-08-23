@@ -21,6 +21,10 @@ namespace Area_51
                 Staff Person = new Staff();
                 Console.WriteLine("Velkommen til person nr " + i);
                 Person.Spawn(Building);
+                controlPanel.RequestElevator(Scanner scanner, SecurityLevels securityLevels, Staff staff);
+                //Panel
+                //Flytte Elevator
+                //Control på objectiveFloor der skyder hvis du ikke har adgang
                 Console.ReadLine();
             }
         }
