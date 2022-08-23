@@ -12,3 +12,10 @@ C:\Users\Pengui\source\repos\Area 51\Area 51\obj\Debug\netcoreapp3.1\Area 51.csp
 C:\Users\Pengui\source\repos\Area 51\Area 51\obj\Debug\netcoreapp3.1\Area 51.dll
 C:\Users\Pengui\source\repos\Area 51\Area 51\obj\Debug\netcoreapp3.1\Area 51.pdb
 C:\Users\Pengui\source\repos\Area 51\Area 51\obj\Debug\netcoreapp3.1\Area 51.genruntimeconfig.cache
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.csproj.AssemblyReference.cache
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.AssemblyInfoInputs.cache
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.AssemblyInfo.cs
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.csproj.CoreCompileInputs.cache
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.dll
+C:\Users\HFGF\source\repos\Area-51\obj\Debug\netcoreapp3.1\Area 51.pdb

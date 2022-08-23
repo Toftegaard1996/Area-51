@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Area_51.Classes
 {
-    class SecurityLevels
+    public class SecurityLevels
     {
         public static Random rnd = new Random();
         public int SecurityLevel = rnd.Next(0, 6);
@@ -15,6 +15,7 @@ namespace Area_51.Classes
             {
                 case 0:
                     Console.WriteLine("Ucertificerede! Indtrængende! Dø!");
+                    //KillWorker();
                     //Ingen adgang
                     //KillRequest
                     break;

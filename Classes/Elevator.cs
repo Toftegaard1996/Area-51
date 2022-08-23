@@ -6,7 +6,15 @@ namespace Area_51.Classes
 {
     class Elevator
     {
-        string[] floor = Floors.floor;
+        public void MoveToSpawnFloor(Staff staff) 
+        {
+            Console.WriteLine("Elevator going to floor " + staff.SpawnFloor);
+        }
+
+        public void MoveToObjectiveFloor(Staff staff) 
+        {
+            Console.WriteLine("Elevator going to floor " + staff.ObjectiveFloor);
+        }
 
     }
 }

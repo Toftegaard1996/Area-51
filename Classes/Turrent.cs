@@ -4,18 +4,19 @@ using System.Text;
 
 namespace Area_51.Classes
 {
-    class Turrent
+    public class Turrent
     {
         //Receive kill command
-        public void RecivedKillRquest()
+        public void KillRequest(Staff staff)
         {
-            
-        }
+            Console.WriteLine("Inge Turretet skyder! Inge stopper aldrig >:D");
+            while (staff.Health > 0)
+            {
+                Console.WriteLine("Bang");
+                staff.Health-= 25;
+            }
+            Console.WriteLine("Hm, de prøvede at komme hen hvor de ikke måtte. Next in line!");
 
-        //Confirm kill message
-        public void ConfirmKill()
-        {
-            
         }
     }
 }

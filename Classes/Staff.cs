@@ -1,60 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Timers;
 
 namespace Area_51.Classes
 {
-    class Staff
+    public class Staff
     {
-
-        // Spawn Values
-        public int SpawnFloors = 0;
-        public int ObjectiveFloor = 0;
-
-        // SpawnTime Values
-        public static Random rnd = new Random();
-        public int SpawnTimer = rnd.Next(1000, 2000);
-
-        public void SpawnTime()
+        public Floors staffFloor = new Floors();
+        public Staff (Floors Floor)
+	    {
+            staffFloor = Floor;
+	    }
+        public Staff()
         {
-            System.Timers.Timer aTimer = new System.Timers.Timer();
-            aTimer.Elapsed += new ElapsedEventHandler(Spawn);
-            aTimer.Interval = SpawnTimer;
-            aTimer.Enabled = true;
-            aTimer.AutoReset = false;
 
         }
 
-        public void Spawn(object source, ElapsedEventArgs e)
+
+        // Spawn Values
+        public int SpawnFloor = 0;
+        public int ObjectiveFloor = 0;
+        public int Health = 100;
+
+        // Random
+        public static Random rnd = new Random();
+
+        public void Spawn( List<Floors> Buildings)
         {
-            int Health = 100;
             Console.WriteLine("Liv: " + Health);
             //Spawn place (Random floor)
-            SpawnFloors = rnd.Next(0, 4);
-            string A = Floors.floor[SpawnFloors];
-            Console.WriteLine(A);
+            SpawnFloor = rnd.Next(0, Buildings.Count);
+            Console.WriteLine(SpawnFloor);
 
             //Objective (Another random floor)
-            ObjectiveFloor = rnd.Next(0, 4);
-            string B = Floors.floor[ObjectiveFloor];
-            while (A == B)
+            ObjectiveFloor = rnd.Next(0, Buildings.Count);
+            while (SpawnFloor == ObjectiveFloor)
             {
-                ObjectiveFloor = rnd.Next(0, 4);
-                B = Floors.floor[ObjectiveFloor];
+                ObjectiveFloor = rnd.Next(0, Buildings.Count);
             }
-            Console.WriteLine(B);
+            Console.WriteLine(ObjectiveFloor);
+            ControlPanel controlpanel = new ControlPanel();
+            SwipeCard(controlpanel);
+        }
 
+        public void SwipeCard(ControlPanel controlPanel) 
+        {
+            //Use Scanner
+            Console.WriteLine("Medarbejder swiper sit kort");
+            Console.WriteLine("Scanneren læser kortet");
+            //Await fate
+            Console.WriteLine("Spændingen stiger");
             //Assign LevelOfClearence
             SecurityLevels securityLevels = new SecurityLevels();
             int ThisSecurityLevel = securityLevels.SecurityLevel;
             SecurityLevels.LevelOfClearence(ThisSecurityLevel);
-        }
-
-        public void SwipeCard() 
-        {
-            //Use Scanner
-            //Await fate
+            Scanner scanner = new Scanner();
+            controlPanel.RequestElevator(scanner, securityLevels, Staff);
             //If not dead, use elevator
         }
     }

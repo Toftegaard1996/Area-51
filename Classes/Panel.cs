@@ -6,7 +6,9 @@ namespace Area_51.Classes
 {
     class Panel
     {
-        string[] floor = Floors.floor;
-        int ThisSecerityLevel = SecurityLevels.SecurityLevel;
+        public void RequestElevator() 
+        {
+            Console.WriteLine("Input the desired destination");
+        }
     }
 }
