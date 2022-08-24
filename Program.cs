@@ -4,28 +4,31 @@ using Area_51.Classes;
 
 namespace Area_51
 {
-    class Program
+    public class Program
     {
+
+
         public static void Main(string[] args)
         {
-            Floors lounge = new Floors();
-            Floors B1 = new Floors();
-            Floors B2 = new Floors();
-            Floors B3 = new Floors();
+            Floor lounge = new Floor();
+            Floor B1 = new Floor();
+            Floor B2 = new Floor();
+            Floor B3 = new Floor();
 
-            List<Floors> Building = new List<Floors>() { lounge, B1, B2, B3 };
+            List<Floor> Building = new List<Floor>() { lounge, B1, B2, B3 };
 
 
-            for (int i = 0; i < 21; i++)
+            for (int i = 1; i < 21; i++)
             {
-                Staff Person = new Staff();
-                Console.WriteLine("Velkommen til person nr " + i);
+                Console.WriteLine("Velkommen til medarbejder nr " + i);
+                Staff Person = new Staff(Building);
                 Person.Spawn(Building);
-                controlPanel.RequestElevator(Scanner scanner, SecurityLevels securityLevels, Staff staff);
-                //Panel
-                //Flytte Elevator
-                //Control på objectiveFloor der skyder hvis du ikke har adgang
-                Console.ReadLine();
+                if (Person.Health > 0)
+                {
+                    Person.SwipeCard();
+                    Console.ReadLine();
+
+                }
             }
         }
     }

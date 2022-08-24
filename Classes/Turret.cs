@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Area_51.Classes
 {
-    public class Turrent
+    public class Turret
     {
         //Receive kill command
         public void KillRequest(Staff staff)

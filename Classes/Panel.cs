@@ -4,11 +4,20 @@ using System.Text;
 
 namespace Area_51.Classes
 {
-    class Panel
+    public class Panel
     {
-        public void RequestElevator() 
+        Elevator Elevator;
+        public Panel(Elevator elevator)
+        {
+            Elevator = elevator;
+        }
+        public void RideElevator(Staff staff) 
         {
             Console.WriteLine("Input the desired destination");
+            Console.ReadLine();
+            Console.WriteLine("Your desired floor is " + staff.ObjectiveFloor);
+            Elevator.MoveToObjectiveFloor(staff);
+            Console.WriteLine("The elevator has arrived");
         }
     }
 }

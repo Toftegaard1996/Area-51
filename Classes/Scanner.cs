@@ -8,11 +8,11 @@ namespace Area_51.Classes
     {
         //Recieve LevelOfClearence from person
         //Check if LevelOfClearence allows chosen floor
-        public Boolean AllowSpawnFloor(SecurityLevels ThisSecurityLevel, Staff staff)
+        public Boolean AllowSpawnFloor(Staff staff)
         {
-            if (ThisSecurityLevel.SecurityLevel != 0)
+            if (staff.SecurityLevel != 0)
             {
-                if (ThisSecurityLevel.SecurityLevel <= staff.SpawnFloor)
+                if (staff.SecurityLevel > staff.SpawnFloor)
                 {
                     return true;
                 }
@@ -21,9 +21,9 @@ namespace Area_51.Classes
             else return false;
         }
 
-        public Boolean AllowObjectiveFloor(SecurityLevels ThisSecurityLevel, Staff staff)
+        public Boolean AllowObjectiveFloor( Staff staff)
         {
-            if (ThisSecurityLevel.SecurityLevel >= staff.ObjectiveFloor)
+            if (staff.SecurityLevel > staff.ObjectiveFloor)
             {
                 return true;
             }
